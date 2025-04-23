@@ -1,41 +1,50 @@
 <!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <!-- Reemplazar por los datos que correspondan -->
-        <title>Programación I | Parcial 1 | APELLIDO, NOMBRE | APELLIDO, NOMBRE</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
-        <link rel="shortcut icon" href="favicon.ico" />
-        <link rel="stylesheet" href="styles/styles.css" />
-    </head>
-    <body>
-        <header>
-            <!-- Reemplazar por los datos que correspondan -->
-            <h1>Programación I | Parcial 1 | APELLIDO, NOMBRE | APELLDIO, NOMBRE</h1>
-        </header>
-        <main>
-            <h2>Mis discos</h2>
-            <button onclick="cargar();">Cargar nuevo disco</button>
-            <button onclick="mostrar();">Mostrar discos</button>
-            <div id="discos">
-                <!--
-                    Aca podrian mostrar los discos
-                -->
-            </div>
-            <script src="scripts/index.js"></script>
-        </main>
-        <footer>
-            <ul>
-                <li>Profesor Fabrizio Carlassara</li>
-                <li>
-                    <a href="mailto:fabrizio.carlassara@davinci.edu.ar?subject=P1%20-%20Consulta%20-%20DW2[M|T|N][A|B]%20-%20Apellido,%20Nombre" target="_blank">fabrizio.carlassara@davinci.edu.ar</a>
-                </li>
-                <li>Programación 1</li>
-                <li>
-                    <!-- Reemplazar por el link del repositorio de GitHub -->
-                    <a href="#">URL del repo de GitHub</a>
-                </li>
-            </ul>
-        </footer>
-    </body>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Programación I | Parcial 1 | Quiroz, Gamaliel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Programación I | Parcial 1 | Quiroz, Gamaliel</h1>
+    </header>
+    <main>
+        <h2>Mis discos</h2>
+        <button onclick="cargar();">Cargar nuevo disco</button>
+        <section id="formulario-carga" style="display: none;">
+            <h3 id="form-title">Cargar nuevo disco</h3>
+            <form id="form-disco">
+                <input type="hidden" name="editando-id" />
+                <label>Nombre del disco:
+                    <input type="text" name="nombre" required />
+                </label><br>
+                <label>Artista:
+                    <input type="text" name="artista" required />
+                </label><br>
+                <label>URL de la portada:
+                    <input type="url" name="portada" required />
+                </label><br>
+                <div id="pistas-container">
+                    <h4>Pistas</h4>
+                </div>
+                <button type="button" onclick="agregarPista()">Agregar pista</button><br><br>
+                <button type="submit">Guardar disco</button>
+                <button type="button" onclick="cancelarCarga()">Cancelar</button>
+            </form>
+        </section>
+        <button onclick="mostrar();">Mostrar discos</button>
+        <div id="discos"></div>
+    </main>
+    <footer>
+        <ul>
+            <li>Profesor Fabrizio Carlassara</li>
+            <li><a href="mailto:fabrizio.carlassara@davinci.edu.ar">fabrizio.carlassara@davinci.edu.ar</a></li>
+            <li>Programación 1</li>
+            <li><a href="#">URL del repo de GitHub</a></li>
+        </ul>
+    </footer>
+</body>
 </html>

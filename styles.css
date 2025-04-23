@@ -1,0 +1,14 @@
+body{
+    background-color: grey;
+}
+
+#formulario{
+    background-color: rgb(125, 125, 248);
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+}
+input,label,textarea{
+    display: block;
+    margin: auto;
+}

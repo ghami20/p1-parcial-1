@@ -1,0 +1,82 @@
+[
+    {
+      "nombre": "One-X",
+      "artista": "Three Days Grace",
+      "id": 201,
+      "portada": "https://cdn-images.dzcdn.net/images/cover/c7f57c5507ba7753412f52371b475806/0x1900-000000-80-0-0.jpg",
+      "pistas": [
+        { "nombre": "It's All Over", "duracion": 213 },
+        { "nombre": "Pain", "duracion": 193 },
+        { "nombre": "Animal I Have Become", "duracion": 212 },
+        { "nombre": "Never Too Late", "duracion": 222 },
+        { "nombre": "On My Own", "duracion": 182 },
+        { "nombre": "Riot", "duracion": 185 },
+        { "nombre": "Get Out Alive", "duracion": 240 },
+        { "nombre": "Let It Die", "duracion": 203 },
+        { "nombre": "Over and Over", "duracion": 212 },
+        { "nombre": "Time of Dying", "duracion": 222 },
+        { "nombre": "Gone Forever", "duracion": 212 },
+        { "nombre": "One-X", "duracion": 272 }
+      ]
+    },
+    {
+      "nombre": "Hybrid Theory",
+      "artista": "Linkin Park",
+      "id": 202,
+      "portada": "https://i.ytimg.com/vi/D2ts2GWOSv8/maxresdefault.jpg",
+      "pistas": [
+        { "nombre": "Papercut", "duracion": 183 },
+        { "nombre": "One Step Closer", "duracion": 155 },
+        { "nombre": "With You", "duracion": 193 },
+        { "nombre": "Points of Authority", "duracion": 187 },
+        { "nombre": "Crawling", "duracion": 209 },
+        { "nombre": "Runaway", "duracion": 185 },
+        { "nombre": "By Myself", "duracion": 183 },
+        { "nombre": "In the End", "duracion": 216 },
+        { "nombre": "A Place for My Head", "duracion": 184 },
+        { "nombre": "Forgotten", "duracion": 193 },
+        { "nombre": "Cure for the Itch", "duracion": 156 },
+        { "nombre": "Pushing Me Away", "duracion": 196 }
+      ]
+    },
+    {
+      "nombre": "Collide with the Sky",
+      "artista": "Pierce The Veil",
+      "id": 203,
+      "portada": "https://m.media-amazon.com/images/I/61a1yVGuh0L._UF1000,1000_QL80_.jpg",
+      "pistas": [
+        { "nombre": "May These Noises Startle You in Your Sleep Tonight", "duracion": 61 },
+        { "nombre": "Hell Above", "duracion": 225 },
+        { "nombre": "A Match into Water", "duracion": 190 },
+        { "nombre": "King for a Day (feat. Kellin Quinn)", "duracion": 235 },
+        { "nombre": "Bulls in the Bronx", "duracion": 270 },
+        { "nombre": "Props & Mayhem", "duracion": 230 },
+        { "nombre": "Tangled in the Great Escape (feat. Jason Butler)", "duracion": 276 },
+        { "nombre": "I'm Low on Gas and You Need a Jacket", "duracion": 224 },
+        { "nombre": "The First Punch", "duracion": 199 },
+        { "nombre": "One Hundred Sleepless Nights", "duracion": 267 },
+        { "nombre": "Stained Glass Eyes and Colorful Tears", "duracion": 243 },
+        { "nombre": "Hold On Till May", "duracion": 258 }
+      ]
+    },
+    {
+      "nombre": "Sempiternal",
+      "artista": "Bring Me The Horizon",
+      "id": 204,
+      "portada": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE3Ct_sJ2U-bhgIuBefdQ29hylE2vaickZcg&s",
+      "pistas": [
+        { "nombre": "Can You Feel My Heart", "duracion": 230 },
+        { "nombre": "The House of Wolves", "duracion": 215 },
+        { "nombre": "Empire (Let Them Sing)", "duracion": 246 },
+        { "nombre": "Sleepwalking", "duracion": 222 },
+        { "nombre": "Go to Hell, for Heaven's Sake", "duracion": 244 },
+        { "nombre": "Shadow Moses", "duracion": 222 },
+        { "nombre": "And the Snakes Start to Sing", "duracion": 331 },
+        { "nombre": "Seen It All Before", "duracion": 197 },
+        { "nombre": "Antivist", "duracion": 182 },
+        { "nombre": "Crooked Young", "duracion": 234 },
+        { "nombre": "Hospital for Souls", "duracion": 413 }
+      ]
+    }
+  ]
+  
