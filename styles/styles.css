@@ -55,6 +55,7 @@ h2 {
     font-size: 2.5em;
     background-color: #333333;
     padding: 0.5em;
+    border-radius: 9px 9px 0 0;
 }
 
 /** Main */
@@ -66,6 +67,14 @@ main {
     padding: 3em 2em;
     background-color: #333333;
 }
+/* Glassmorfismo */
+/* main{
+    backdrop-filter: blur(5px) saturate(129%);
+    -webkit-backdrop-filter: blur(5px) saturate(129%);
+    background-color: rgba(17, 25, 40, 0.6);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+} */
 main p {
     font-size: 2.2em;
     line-height: 1.6;
@@ -103,14 +112,14 @@ main button:hover {
 /** Galería de discos */
 #discos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2em;
     margin-top: 2em;
     width: 100%;
 }
 .contenedor {
     border-radius: 1em;
-    background-color: rgba(208, 224, 227, 0.95);
+    background-color: rgb(34 97 109 / 21%);
     min-height: 200px;
     padding: 2em;
     text-align: center;
@@ -138,18 +147,27 @@ main button:hover {
     margin-top: 1em;
     list-style: disc;
     text-align: left;
+    background-color: #333333;
+    border-radius: 15px;
 }
 .detalles.mostrar {
     display: block;
     animation: fadeIn 0.5s ease-in-out;
 }
-
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-5px); }
     to { opacity: 1; transform: translateY(0); }
 }
-.detalles li {
-    color: #000;
+.detalle-comun {
+    color: whitesmoke;
+}
+.detalle-destacado{
+    color: #ff2a2a;
+    font-weight: bold;
+}
+.detalles:hover{
+    border-radius: 45px;
+    box-shadow: 5px 5px 25px #bebebe, -5px -5px 25px #ffffff;
 }
 
 /** Formulario */
@@ -162,9 +180,7 @@ main button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
     border-radius: 1em;
 }
-#formulario-carga input, 
-#formulario-carga select, 
-#formulario-carga textarea {
+.campos {
     width: 100%;
     padding: 1em;
     margin: 1em 0;
@@ -173,27 +189,25 @@ main button:hover {
     background-color: #222222;
     color: #E2E2E2;
 }
-#formulario-carga input:focus, 
-#formulario-carga select:focus, 
-#formulario-carga textarea:focus {
+.campos:focus {
     border-color: #D47B1A;
     outline: none;
+    scale: 1.01;
 }
 
 /** Footer */
-footer {
+footer, footer ul {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+footer {
+    justify-content: center;
     padding: 2em;
     background-color: #222222;
 }
 footer ul {
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     list-style: none;
 }
 footer ul li {

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Programación I | Parcial 1 | Quiroz, Gamaliel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script defer src="scripts/index2.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Programación I | Parcial 1 | Quiroz, Gamaliel</h1>
+    </header>
+    <main>
+        <h2>Mis discos</h2>
+        <button type="button" onclick="cargar();">Cargar nuevo disco</button>
+        <section id="formulario-carga" style="display: none;">
+            <h3 id="form-title">Cargar nuevo disco</h3>
+            <form id="form-disco">
+                <input type="hidden" name="editando-id" />
+                <label>Nombre del disco:
+                    <input type="text" name="nombre" required />
+                </label><br>
+                <label>Artista:
+                    <input type="text" name="artista" required />
+                </label><br>
+                <label>URL de la portada:
+                    <input type="url" name="portada" required />
+                </label><br>
+                <label>Código numérico único del disco:
+                    <input type="number" name="codigo_disco" required />
+                </label><br>
+                <div id="pistas-container">
+                    <h4>Pistas</h4>
+                </div>
+                <button type="button" onclick="agregarPista()">Agregar pista</button><br><br>
+                <button type="submit">Guardar disco</button>
+                <button type="button" onclick="cancelarCarga()">Cancelar</button>
+            </form>
+        </section>
+        <button type="button" onclick="mostrar();">Mostrar discos</button>
+        <div id="discos"></div>
+    </main>
+    <footer>
+        <ul>
+            <li>Profesor Fabrizio Carlassara</li>
+            <li><a href="mailto:fabrizio.carlassara@davinci.edu.ar">fabrizio.carlassara@davinci.edu.ar</a></li>
+            <li>Programación 1</li>
+            <li><a href="https://github.com/ghami20/p1-parcial-1">URL del repo de GitHub</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
