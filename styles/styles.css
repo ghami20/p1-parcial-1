@@ -1,260 +1,228 @@
 @charset "utf-8";
 
 /** Fonts */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
 
-/** Reset y tipografía base */
+
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 *, *:before, *:after {
     box-sizing: inherit;
+    
 }
 * {
     margin: 0;
     padding: 0;
-    font-size: 10px;
-    line-height: 1.5;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+    color: #E2E2E2;
 }
 
-/** Parallax Background + Body */
+/** Body & Background */
 body {
     background-image: url('https://wallpapers.com/images/hd/1920x1080-anime-zatsune-miku-black-aqua-e7aw0yqxv9oxs0t1.jpg');
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: #1a1a1a;
-    color: #E2E2E2;
+    background-color: #111;
+    font-size: 1.6rem;
+    padding-bottom: 5em;
 }
 
 /** Header */
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 3em;
-    background-color: #222222;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 3em 2em;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #1fd6ff;
 }
 
-/** Encabezados */
 h1, h2 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    text-align: center;
     color: #1fd6ff;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 h1 {
-    font-size: 4em;
+    font-size: 4rem;
 }
 h2 {
-    font-size: 2.5em;
-    background-color: #333333;
-    padding: 0.5em;
-    border-radius: 9px 9px 0 0;
+    font-size: 3rem;
+    background: rgba(51, 51, 51, 0.6);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid #1fd6ff33;
 }
 
 /** Main */
 main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 3em 2em;
-    background-color: #333333;
+    backdrop-filter: blur(6px) saturate(140%);
+    -webkit-backdrop-filter: blur(6px) saturate(140%);
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
-main{
-    backdrop-filter: blur(5px) saturate(129%);
-    -webkit-backdrop-filter: blur(5px) saturate(129%);
-    background-color: rgba(17, 25, 40, 0.6);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-}
-main p {
-    font-size: 2.2em;
-    line-height: 1.6;
-    color: #1fd6ff;
+
+/** Párrafos y listas */
+main p, main ul li {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 main ul {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-}
-main ul li {
-    margin-left: 2em;
-    font-size: 2.2em;
-    color: #D0E0E3;
+    list-style: disc inside;
 }
 
 /** Botones */
 main button {
-    margin: .5em 0;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    margin: 1rem 0;
     border: none;
-    border-radius: .5em;
-    padding: .25em .5em;
-    background-color: #1fd6ff;
-    cursor: pointer;
-    font-size: 2.4em;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #1fd6ff, #16c3e7);
     color: #000;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s, background 0.3s;
 }
 main button:hover {
-    background-color: #1fd6ff;
-    opacity: 0.9;
+    background: #1fd6ff;
+    transform: scale(1.02);
 }
 
-/** Galería de discos */
+/** Galería */
 #discos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2em;
-    margin-top: 2em;
-    width: 100%;
+    margin-top: 3rem;
 }
 .contenedor {
-    border-radius: 1em;
-    background-color: rgb(34 97 109 / 21%);
-    min-height: 200px;
+    background-color: rgba(34, 97, 109, 0.2);
     padding: 2em;
+    border-radius: 1em;
     text-align: center;
-    margin: 10px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-    transition: transform 0.3s, box-shadow 0.3s;
-    
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s ease;
 }
 .contenedor:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9);
 }
 .contenedor img {
-    display: block;
+    max-width: 220px;
     margin: auto;
-    width: 100%;
-    max-width: 250px;
-    border-radius: 0.5em;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 }
+
+/** Detalles */
 .detalles {
-    max-height: 200px;
-    overflow-y: auto;
     display: none;
     margin-top: 1em;
+    padding: 1em;
+    background-color: #222;
+    border-radius: 2rem;
     list-style: disc;
-    text-align: left;
-    background-color: #333333;
-    border-radius: 15px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 .detalles.mostrar {
     display: block;
-    animation: fadeIn 0.5s ease-in-out;
-}
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-5px); }
-    to { opacity: 1; transform: translateY(0); }
 }
 .detalle-comun {
-    color: whitesmoke;
+    color: #ccc;
 }
-.detalle-destacado{
-    color: #ff2a2a;
+.detalle-destacado {
+    color: #ff4040;
     font-weight: bold;
 }
-.detalles:hover{
-    border-radius: 45px;
-    box-shadow: 5px 5px 25px #bebebe, -5px -5px 25px #ffffff;
+.detalles:hover {
+    box-shadow: 0 0 25px #1fd6ff80;
 }
 
 /** Formulario */
 #formulario-carga {
-    margin-top: 20px;
-    padding: 15px;
-    border: 1px solid #444;
-    background-color: #333333;
-    color: #1fd6ff;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.7);
-    border-radius: 1em;
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    border-radius: 1.5rem;
+    border: 1px solid #1fd6ff55;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
 }
 .campos {
     width: 100%;
-    padding: 1em;
-    margin: 1em 0;
-    border-radius: 0.5em;
-    border: 2px solid  #1fd6ff;
-    background-color: #222222;
-    color: #E2E2E2;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 2px solid #1fd6ff;
+    background-color: #222;
+    color: #fff;
+    border-radius: 1rem;
+    font-size: 1.6rem;
 }
 .campos:focus {
-    border-color: #1fd6ff;
     outline: none;
-    scale: 1.01;
+    border-color: #1fd6ff;
+    background-color: #111;
 }
 
 /** Footer */
-footer, footer ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 footer {
-    justify-content: center;
+    margin-top: 3rem;
     padding: 2em;
-    background-color: #222222;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-top: 1px solid #1fd6ff33;
+    text-align: center;
 }
 footer ul {
-    justify-content: space-between;
     list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 footer ul li {
-    font-size: 1.6em;
-    color: #D0E0E3;
+    font-size: 1.6rem;
 }
 footer ul li a {
-    font-size: 1.2em;
+    color: #1fd6ff;
     text-decoration: none;
-    color:  #1fd6ff;
 }
 footer ul li a:hover {
-    color:  #1fd6ff;
+    text-decoration: underline;
+}
+.error{
+    color: red;
+    display: none;
+}
+/** Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /** Responsive */
 @media screen and (max-width: 600px) {
-    main {
-        padding: 1em;
+    h1 {
+        font-size: 2.5rem;
     }
-    h1, h2 {
-        font-size: 2em;
+    h2 {
+        font-size: 2rem;
+    }
+    main {
+        padding: 1.5rem;
     }
     main button {
-        font-size: 1.8em;
-        padding: 0.4em 1em;
-    }
-    #formulario-carga {
-        padding: 1em;
-    }
-    .contenedor {
-        padding: 1.5em;
-    }
-}
-
-@media screen and (min-width: 960px) {
-    main div.galeria {
-        flex-direction: row;
-    }
-    main div.galeria > img {
-        max-width: 24%;
-        margin: 1em .5%;
-    }
-    main div.galeria div {
-        align-self: flex-start;
-        width: 30%;
-    }
-    footer ul {
-        flex-direction: row;
+        font-size: 1.6rem;
     }
 }

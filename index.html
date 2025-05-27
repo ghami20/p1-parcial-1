@@ -22,17 +22,23 @@
             <form id="form-disco">
                 <input type="hidden" name="editando-id" />
                 <label>Nombre del disco:
-                    <input type="text" name="nombre" class="campos" required />
+                    <input type="text" name="nombre" class="campos"  />
                 </label><br>
+                <label class="error" id="ErrorNombre" for="">Error en nombre</label>
                 <label>Artista:
-                    <input type="text" name="artista" class="campos" required />
+                    <input type="text" name="artista" class="campos"  />
                 </label><br>
+                <label class="error" id="ErrorArtista" for="">Error artista</label>
+
                 <label>URL de la portada:
-                    <input type="url" name="portada" class="campos" required />
+                    <input type="url" name="portada" class="campos"  />
                 </label><br>
+                <label class="error" id="ErrorPortada" for="">Error url</label>
+
                 <label>Código numérico único del disco:
-                    <input type="number" name="codigo_disco" class="campos" required />
+                    <input type="number" name="codigo_disco" class="campos"  />
                 </label><br>
+                  <label class="error" id="ErrorCodigo" for="">Error codigo</label>
                 <div id="pistas-container">
                     <h4>Pistas</h4>
                 </div>

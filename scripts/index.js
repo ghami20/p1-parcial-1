@@ -34,10 +34,10 @@ function agregarPista(nombre = '', duracion = '', index = null) {
   const div = document.createElement('div');
   div.innerHTML = `
     <label>Nombre pista:
-      <input type="text" name="pista-nombre-${index}" value="${nombre}" class="campos" required />
+      <input type="text" name="pista-nombre-${index}" value="${nombre}" class="campos"  />
     </label>
     <label>Duración (segundos):
-      <input type="number" name="pista-duracion-${index}" value="${duracion}" class="campos" required min="0" max="7200" />
+      <input type="number" name="pista-duracion-${index}" value="${duracion}" class="campos"  min="0" max="7200" />
     </label>
     <button type="button" onclick="this.parentElement.remove()">Eliminar</button>
     <br>
@@ -57,6 +57,28 @@ document.getElementById('form-disco').addEventListener('submit', function (event
   const portada = form.portada.value.trim();
   const id = parseInt(form.codigo_disco.value.trim(), 10); // Convertimos el código a número
 
+  const ErrorCodigo = document.getElementById("ErrorCodigo");
+ const ErrorPortada = document.getElementById("ErrorPortada");
+const ErrorArtista = document.getElementById("ErrorArtista");
+const ErrorNombre = document.getElementById("ErrorNombre");
+  ErrorNombre.style.display = "none";
+  ErrorArtista.style.display = "none";
+  ErrorPortada.style.display = "none";
+  ErrorCodigo.style.display = "none";
+
+
+if (!nombre) {
+  ErrorNombre.style.display = "block";
+}
+if (!artista) {
+  ErrorArtista.style.display = "block";
+}
+if (!portada) {
+  ErrorPortada.style.display = "block";
+}
+if (isNaN(id)) {
+  ErrorCodigo.style.display = "block";
+}
   if (!nombre || !artista || !portada || isNaN(id)) {
     alert("Todos los campos del formulario son obligatorios.");
     return false;
